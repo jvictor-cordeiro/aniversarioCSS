@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Wendy+One" rel="stylesheet" type="text/css">
     <style>
+
         .container {
             text-align: center; /* Centraliza o texto e as imagens */
         }
@@ -15,16 +16,26 @@
         .stickers {
             display: flex; /* Usa flexbox para alinhar as imagens em linha */
             justify-content: center; /* Centraliza as figurinhas horizontalmente */
-            margin-top: 200px; /* Espaçamento acima das figurinhas */
+            margin-top: 100px; /* Espaçamento acima das figurinhas */
+            gap: 50px; /* Espaçamento entre as figurinhas */
         }
 
         .sticker {
-            width: 150px; /* Define uma largura para as figurinhas */
-            height: 150px; /* Mantém a proporção da imagem */
-            margin: 0 40px; /* Espaçamento entre as figurinhas */
-            border-radius: 10px; /* Arredonda os cantos das figurinhas */
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra leve */
+            width: 200px; /* Define uma largura maior para as figurinhas */
+            height: 200px; /* Mantém a proporção da imagem */
+            border-radius: 15px; /* Arredonda mais os cantos para um visual moderno */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra mais pronunciada */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Anima transformações e sombras */
+            cursor: pointer; /* Muda o cursor para indicar interatividade */
         }
+
+        .sticker:hover {
+            transform: scale(1.05) rotate(2deg); /* Aumenta levemente e gira a imagem no hover */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Aumenta a sombra no hover */
+            filter: brightness(1.1); /* Aumenta a luminosidade da imagem */
+        }
+
+
     </style>
 </head>
 <body>
