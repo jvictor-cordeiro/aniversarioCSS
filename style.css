@@ -156,7 +156,7 @@ h1 {
 
 h2 {
     position: relative;
-    text-align: center;
+    text-align: justify;
     color: rgb(0, 102, 204); /* Azul bonito */
     font-size: 1.8em;
     font-family: 'Montserrat', sans-serif; /* Fonte bonita */
