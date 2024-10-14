@@ -156,9 +156,9 @@ h1 {
 
 h2 {
     position: relative;
-    text-align: justify;
+    text-align: center;
     color: rgb(0, 102, 204); /* Azul bonito */
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-family: 'Montserrat', sans-serif; /* Fonte bonita */
     animation: fadeIn 2s ease-in-out; /* Animação de aparecimento */
 }
