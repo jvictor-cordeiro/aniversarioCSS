@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Wendy+One" rel="stylesheet" type="text/css">
     <style>
-
         .container {
             text-align: center; /* Centraliza o texto e as imagens */
         }
@@ -34,8 +33,6 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Aumenta a sombra no hover */
             filter: brightness(1.1); /* Aumenta a luminosidade da imagem */
         }
-
-
     </style>
 </head>
 <body>
@@ -50,10 +47,31 @@
 
         <!-- Adicionando as figurinhas -->
         <div class="stickers">
-            <img src="Sara1.jpg" alt="Figura 1" class="sticker" />
-            <img src="Sara2.jpeg" alt="Figura 2" class="sticker" />
-            <img src="Sara3.png" alt="Figura 3" class="sticker" />
+            <img src="Sara1.jpg" alt="Figura 1" class="sticker" onclick="playMusic(1)" />
+            <img src="Sara2.jpeg" alt="Figura 2" class="sticker" onclick="playMusic(2)" />
+            <img src="Sara3.png" alt="Figura 3" class="sticker" onclick="playMusic(3)" />
         </div>
     </div>
+
+    <script> 
+        // Cria um array com os arquivos de música
+        const musicas = [
+            new Audio('music/Rubel.mp3'),
+            new Audio('music/Shawn.mp3'),
+            new Audio('music/Lenine.mp3')
+        ];
+
+        // Função para reproduzir a música correspondente
+        function playMusic(index) {
+            // Pausa todas as músicas antes de tocar a próxima
+            musicas.forEach(musica => {
+                musica.pause();
+                musica.currentTime = 0;
+            });
+
+            // Reproduz a música selecionada
+            musicas[index - 1].play();
+        }
+    </script>
 </body>
 </html>
